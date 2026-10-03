@@ -31,12 +31,14 @@ const Footer = (props) => {
 }
 
 const App = () => {
-  const course = 'Bachelor of Science in Information Technology'
-  const parts = [
-    {name: 'Industry Elective 1', exercises: 3},
-    {name: 'Information Management 2', exercises: 3},
-    {name: 'Applications Development and Emerging Technologies', exercises: 3}
-  ]
+  const course = {
+  name: 'Bachelor of Science in Information Technology',
+  parts: [
+      {name: 'Industry Elective 1', exercises: 3},
+      {name: 'Information Management 2', exercises: 3},
+      {name: 'Applications Development and Emerging Technologies', exercises: 3}
+    ]
+  }
 
   const name = 'James Allen M. Villamor'
   const courseCode = 'CSIT340'
@@ -44,9 +46,9 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course}/>
-      <Content parts={parts}/>
-      <Total parts={parts}/>
+      <Header course={course.name}/>
+      <Content parts={course.parts}/>
+      <Total parts={course.parts}/>
       <Footer name={name} courseCode={courseCode} section={section}/>
     </div>
   )
